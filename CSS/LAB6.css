@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: auto;
+    font-family: Arial;
+  }
+  
+  /* 4 cot ke nhau */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+  
+  /* lam mo anh */
+  .column img {
+    opacity: 0.8; 
+    cursor: pointer; 
+  }
+  
+  .column img:hover {
+    opacity: 1;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* open img container */
+  .container {
+    position: relative;
+    display: none;
+  }
+  
+  /* catagory of img */
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: greenyellow;
+    font-size: 20px;
+  }
+  
+  /* Close button for img */
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: greenyellow;
+    font-size: 35px;
+    cursor: pointer;
+  }

@@ -1,0 +1,36 @@
+.button {
+    border-radius: 8px;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+.note{
+    background-color: lightskyblue;
+    color: crimson;
+}
+.button:hover{
+    background-color: gray;
+}
+body{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+input{
+    border-radius: 5px;
+}
+fieldset{
+    border-radius: 5px;
+}
+select{
+    border-radius: 5px;
+}
+textarea{
+    border-radius: 5px;
+}
+span{
+    position: sticky;
+}

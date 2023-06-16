@@ -1,0 +1,11 @@
+.small {
+    display: hidden;
+    float: left;
+    overflow: hidden;
+    padding-left: 100px;
+}
+
+.small:hover{
+    float: left;
+    padding-left: 255px;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html><html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/CSS/LAB6.css">
+    </head>
+  <body>
+    <style>
+      body{
+        background-color: gray;
+      }
+    </style>
+    <div style="text-align:center">
+      <h2>Tabbed Image Gallery</h2>
+      <p>Click on the images below:</p>
+    </div>
+    <div class="sliding">
+      <img class="mySlides" src="/images/leo2.jpg" width="80%" height="60%" alt="mediaPage.html">
+          <img class="mySlides" src="/images/leo2.jpg"width="80%" height="60%" alt="mediaPage.html">
+          <img class="mySlides" src="/images/leo2.jpg" width="80%" height="60%" alt="mediaPage.html">
+          <img class="mySlides" src="/images/leo2.jpg" width="80%" height="60%" alt="mediaPage.html">
+          <img class="mySlides" src="/images/leo2.jpg"width="80%" height="60%" alt="mediaPage.html">
+        <button style="float: left;" class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button style="float: right;" class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+      </div>
+      <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          x[slideIndex-1].style.display = "block";  
+        }
+        </script>
+      <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 5000); // Change image every 2 seconds
+        }
+      </script>
+    <div class="row">
+      <div class="column">
+        <img src="/images/leo2.jpg" alt="Leopard 2A5" style="width:80%" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="/images/HP Victus 15 layout 2.png" alt="Layout" style="width:80%" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="/images/logofpt.webp" alt="Logo" style="width:80%" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="/images/VelocityTech logo.png logo.png" alt="Logo" style="width:80%" onclick="myFunction(this);">
+      </div>
+    </div>
+
+
+    <div class="container">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <img id="expandedImg" style="width:100%">
+      <div id="imgtext"></div>
+    </div>
+        <script>
+          function myFunction(imgs) {
+          var expandImg = document.getElementById("expandedImg");
+          var imgText = document.getElementById("imgtext");
+          expandImg.src = imgs.src;
+          imgText.innerHTML = imgs.alt;
+          expandImg.parentElement.style.display = "block";
+          }
+        </script>
+      </body>
+</html>
